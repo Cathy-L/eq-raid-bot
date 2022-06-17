@@ -53,9 +53,15 @@ async def on_message(message):
         embed.timestamp = datetime.utcnow()
 
         raid_msg = await message.channel.send(" ".join(tags), embed=embed)
-        for emoji in client.emojis:
+
+        sorted_emojis = []
+        for emoji in message.guild.emojis:
             if emoji.name in CLASSES:
-                await raid_msg.add_reaction(emoji)
+                sorted_emojis.append(emoji)
+
+        sorted_emojis.sort(key=lambda e: e.name)
+        for emoji in sorted_emojis:
+            await raid_msg.add_reaction(emoji)
 
 
 @client.event
@@ -68,7 +74,6 @@ async def on_reaction_add(reaction, user):
 
 @client.event
 async def on_reaction_remove(reaction, user):
-    print("called remove rxn")
     msg = reaction.message
     if user != client.user and msg.author == client.user and reaction.emoji.name in CLASSES:
         # users = [u for field in msg.embeds[0].fields for u in field.value.split("\n")]
@@ -85,7 +90,6 @@ async def on_reaction_remove(reaction, user):
 # --------- Actions ---------
 
 async def add_remove_user_role(message, role, user, primary, adding):
-    print("ROLE:", user, role, primary, "adding =",adding)
     if role in CLASSES:
         embed = message.embeds[0]
         index = ROLE_INDEX[role]
