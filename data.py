@@ -33,6 +33,10 @@ ROLE_INDEX = {
     'cleric': 21
 }
 
+STATUSES = ["❌", "❔", "🕒"]
+
+STATUS_HEADERS = ["❌ __Absent:__ ", "❔ __Tentative:__ ", "🕒 __Late:__"]
+
 secondary_txt = "\n\n*__Alternatives__*\n"
 
 def get_embed_outline(msg, title="Raid Signup"):
@@ -111,5 +115,10 @@ def get_embed_outline(msg, title="Raid Signup"):
 
             {"name": f"{get(msg.guild.emojis, name='cleric')} __Cleric__ (0)",
              "value": "None"},
+
+            {
+                "name": "\u200b",
+                "value": "❌ __Absent:__ \n❔ __Tentative:__ \n🕒 __Late:__ "
+            }
         ]
     }
