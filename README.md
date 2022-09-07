@@ -34,6 +34,7 @@ Examples:
 
 ## Contact
 
-Send me a PM on Discord @caffy#2808. I am open to any questions, comments, suggestions, bug reports, compliments ❤️
+Email me at caffynated@outlook.com
+Send me a PM on Discord @caffy#2808
 
 This is my first Discord bot, made for my bf's raid guild. Please be gentle 🥲
