@@ -1,5 +1,7 @@
 # Project 1999 Discord Raid Bot
 
+## Fix for the Discord Bot command update is a WIP.
+
 Invite: https://discord.com/api/oauth2/authorize?client_id=983582463643254814&permissions=1100585593920&scope=bot
 
 ### NOTE: In order for the bot to work properly, your server MUST include all the exact LOWERCASE emoji names listed in the `emojis` directory (minus the .png extension)
@@ -34,7 +36,8 @@ Examples:
 
 ## Contact
 
-Email me at caffynated@outlook.com
-Send me a PM on Discord @caffy#2808
+Email me: caffynated @ outlook dot com
+
+Or: send me a PM on Discord @caffy#2808
 
 This is my first Discord bot, made for my bf's raid guild. Please be gentle 🥲
